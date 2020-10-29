@@ -10,6 +10,7 @@ const issueListDummy = () => {
       milestoneIdx: 'frontEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
     {
       idx: 2,
@@ -21,6 +22,7 @@ const issueListDummy = () => {
       milestoneIdx: 'frontEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
     {
       idx: 3,
@@ -32,6 +34,7 @@ const issueListDummy = () => {
       milestoneIdx: 'frontEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
     {
       idx: 4,
@@ -43,6 +46,7 @@ const issueListDummy = () => {
       milestoneIdx: 'frontEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
     {
       idx: 5,
@@ -54,6 +58,7 @@ const issueListDummy = () => {
       milestoneIdx: 'backEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
     {
       idx: 6,
@@ -65,6 +70,7 @@ const issueListDummy = () => {
       milestoneIdx: 'frontEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
     {
       idx: 7,
@@ -76,6 +82,7 @@ const issueListDummy = () => {
       milestoneIdx: 'frontEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
     {
       idx: 8,
@@ -87,6 +94,7 @@ const issueListDummy = () => {
       milestoneIdx: 'backEnd',
       labelTitle: 'FE',
       labelColor: 'red',
+      isCheckBoxChecked: false,
     },
   ];
 };

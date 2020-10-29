@@ -18,7 +18,7 @@
     closedTime: null,
     status: true,
     milestoneIdx: frontEnd,
-    isCheckBoxCheckd:boolean, //default False
+    isCheckBoxChecked:boolean, //default False
   },
   {
     idx: 2,
@@ -28,7 +28,7 @@
     closedTime: null,
     status: true,
     milestoneIdx: frontEnd,
-    isCheckBoxCheckd:boolean, //default False
+    isCheckBoxChecked:boolean, //default False
   },
 ]
 */
@@ -62,27 +62,26 @@ const IssueUnCheckAll = 'IssueUnCheckAll';
  * 반드시 청소하기
  */
 function reducer(state, action) {
-  let newData;
   switch (action.type) {
-    case IssueListInitialize:
+    case IssueListInitialize: {
       return action.data;
-
-    case IssueCheckToggle:
-      newData = _.clonedeep(state);
+    }
+    case IssueCheckToggle: {
+      const newData = _.cloneDeep(state);
       const toggleTarget = newData.find((data) => data.idx === action.id);
-      toggleTarget.isCheckBoxChecked = !toggletarget.isCheckBoxChecked;
+      toggleTarget.isCheckBoxChecked = !toggleTarget.isCheckBoxChecked;
       return newData;
-
-    case IssueCheckAll:
-      newData = _.clonedeep(state);
+    }
+    case IssueCheckAll: {
+      const newData = _.cloneDeep(state);
       newData.forEach((data) => (data.isCheckBoxChecked = true));
       return newData;
-
-    case IssueUnCheckAll:
-      newData = _.clonedeep(state);
+    }
+    case IssueUnCheckAll: {
+      const newData = _.clonedeep(state);
       newData.forEach((data) => (data.isCheckBoxChecked = false));
       return newData;
-
+    }
     default:
       throw new Error('없는 형식 이네요');
   }
