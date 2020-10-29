@@ -42,6 +42,7 @@ const IssueStyle = styled.div`
 `;
 
 const Issue = ({
+  idx,
   title,
   labelTitle,
   labelColor,
@@ -50,8 +51,11 @@ const Issue = ({
   status,
   author,
   milestoneIdx,
+  isCheckBoxChecked,
+  onChange,
 }) => {
   const [checked, setChecked] = useState(false);
+  const {store, actions} = useContext(IssueListModelContext);
   const label = {labelTitle, labelColor};
 
   return (
@@ -59,8 +63,8 @@ const Issue = ({
       <div className="wrapper__issue__top">
         <input
           type="checkbox"
-          checked={checked}
-          onChange={() => setChecked(!checked)}
+          checked={isCheckBoxChecked}
+          onChange={() => onChange(idx)}
         />
         <img className="icon__open" src={openIcon}></img>
         <div className="issue__title">{title}</div>

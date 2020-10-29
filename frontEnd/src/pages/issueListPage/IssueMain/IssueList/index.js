@@ -22,7 +22,12 @@ const IssueNavigationList = () => {
       <IssueListHeader></IssueListHeader>
       <IssueListWrapper>
         {store.map((data) => (
-          <Issue {...data} key={data.idx} />
+          <Issue
+            {...data}
+            key={data.idx}
+            checked={data.checked}
+            onChange={actions.IssueToggle}
+          />
         ))}
       </IssueListWrapper>
     </IssueNavigationLayout>
