@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import './App.css';
-import {HashRouter} from 'react-router-dom';
-import Router from '../router/Router';
+import {HashRouter, BrowserRouter as Router} from 'react-router-dom';
+import {createBrowserHistory} from 'history';
+import RouterComponent from '../router/RouterComponent';
 
 const moveTokenCookieToLocalStorage = () => {
   try {
@@ -30,9 +31,11 @@ const App = () => {
   moveTokenCookieToLocalStorage();
   return (
     <AppStyle>
-      <HashRouter>
-        <Router />
-      </HashRouter>
+      {/* <HashRouter> */}
+      <Router>
+        <RouterComponent />
+      </Router>
+      {/* </HashRouter> */}
     </AppStyle>
   );
 };

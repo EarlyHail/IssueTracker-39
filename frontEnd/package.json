@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest ./frontEnd",
-    "start": "webpack serve",
+    "start": "webpack-dev-server --inline --content-base . --history-api-fallback",
     "build": "webpack",
     "watchTest": "jest --watchAll"
   },
